@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component, Fragment} from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import './App.scss';
+import CarAudio from './components/CarAudio';
+import CarAudioPage from './components/CarAudioPage';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+export class App extends Component {
+  render() {
+    return (
+      <Router>
+      <Fragment>
+        <h2 class="title">Wordpress Docker React Axios React Router</h2>
+        <Route exact path="/" component={CarAudio}/>
+        <Route exact path="/car-audio/:id" component={CarAudioPage}/>
+ 
+      </Fragment>
+    </Router>
+    )
+  }
 }
 
 export default App;
