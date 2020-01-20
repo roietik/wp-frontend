@@ -13,7 +13,7 @@ export class CarAudioPage extends Component {
     }
 
     componentDidMount() {
-        console.log('this.props:',this.props.match.params.id)
+        console.log('match:',this.props.match.params.id)
         axios.get(`/wp-json/wp/v2/car-audio/${this.props.match.params.id}`)
             .then(res => {
                 this.setState({

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 
-export class CarAudioItem extends Component {
+export class AutoDetailingItem extends Component {
 
     state = {
         imgUrl: '',
@@ -37,8 +37,7 @@ export class CarAudioItem extends Component {
                     <div dangerouslySetInnerHTML={{__html: excerpt.rendered}}/>
                     <small>Review by <strong>{author}</strong></small>
                     <br/>
-                    <Link to={`/car-audio/${id}`}>Read Review</Link>
-                    <hr/>
+                    <Link to={`/auto-detailing/${id}`}>Read Review</Link>
                 </div>
             )
         }
@@ -50,4 +49,4 @@ export class CarAudioItem extends Component {
     }
 }
 
-export default CarAudioItem;
+export default AutoDetailingItem;
